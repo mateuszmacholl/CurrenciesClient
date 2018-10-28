@@ -12,4 +12,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Screens
 
-  ![image](https://preview.ibb.co/jXKhJA/ii.png)
+  ![image](https://preview.ibb.co/gqE3aq/ii.png)
