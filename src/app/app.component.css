@@ -1,0 +1,20 @@
+.container{
+  margin-top: 10%;
+}
+
+
+form{
+  margin-bottom: 7%;
+}
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
+
+.green{
+  color: #28863D;
+}
+
+.btn{
+  float: right;
+}

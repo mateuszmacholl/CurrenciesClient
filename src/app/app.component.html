@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>Get average purchase rate and sale standard deviation </h2>
+  <form [formGroup]="form">
+    <div class="form-group">
+      <label for="currency">Currency</label>
+      <input type="text" class="form-control" formControlName="type" id="currency" required>
+    </div>
+
+    <div class="form-group">
+      <label for="start-date">Start Date</label>
+      <input type="date" value="2000-01-01" formControlName="startDate" class="form-control" id="start-date">
+    </div>
+
+    <div class="form-group">
+      <label for="end-date">End Date</label>
+      <input type="date" value="2000-01-01" formControlName="endDate" class="form-control" id="end-date">
+    </div>
+
+    <button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button>
+  </form>
+
+  <div *ngIf="submitted">
+    <div *ngIf="error != ''; else data">
+      {{error}}
+    </div>
+    <ng-template #data class="row">
+      <div class="col-10 col-centered">
+        <h5>Statistics for {{f.type.value}} in the period of {{f.startDate.value}} to {{f.endDate.value}}</h5>
+        <hr>
+        <h6>Average purchase rate: <span class="green">{{averagePurchaseRate}}</span>
+        <br>
+        Sale standard deviation: <span class="green">{{saleStandardDeviation}}</span></h6>
+      </div>
+    </ng-template>
+  </div>
+</div>
